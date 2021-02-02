@@ -1,0 +1,20 @@
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/mixins";
+
+@import "./base/common";
+@import "./base/container";
+@import "./base/section";
+
+@import "./components/active-page";
+@import "./components/img";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/hero";
+@import "./layout/advantages";
+@import "./layout/activity";
+@import "./layout/team";
+@import "./layout/icons";
+@import "./layout/clients";
+@import "./layout/modal";

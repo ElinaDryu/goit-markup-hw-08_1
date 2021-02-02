@@ -1,0 +1,18 @@
+.active-page {
+  color: var(--accent-color-blue);
+}
+.active-page {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    height: 4px;
+    background-color: var(--accent-color-blue);
+    bottom: -32px;
+    left: 0px;
+    border-radius: 2px;
+  }
+}
