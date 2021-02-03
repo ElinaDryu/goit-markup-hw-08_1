@@ -7,21 +7,12 @@
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    margin-bottom: 30px;
   }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
-  }
-
-  &__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__name {
@@ -36,6 +27,10 @@
     @include font(16px, 400, 19px);
     letter-spacing: 0.03em;
   }
+
+  &__list {
+    text-align: center;
+  }
 }
 
 .team-container {
@@ -46,4 +41,86 @@
   color: var(--main-color-black);
   @include font(36px, 700, 42px);
   letter-spacing: 0.03em;
+}
+
+.img_size {
+  width: 450px;
+  height: 460px;
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    .img_size {
+      width: 354px;
+      height: 374px;
+    }
+
+    &__subtitle {
+      &:not(2n + 1) {
+        margin-right: 30px;
+      }
+    }
+
+    // &__list {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    // }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    background: var(--team-bcg);
+
+    .img_size {
+      width: 270px;
+      height: 260px;
+    }
+
+    &__subtitle {
+      background: var(--header-bcg);
+      text-align: center;
+      border-radius: 0px 0px 4px 4px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__name {
+      color: var(--main-color-black);
+      @include font(16px, 500, 19px);
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+    }
+
+    &__prof {
+      color: var(--main-color-grey);
+      @include font(16px, 400, 19px);
+      letter-spacing: 0.03em;
+    }
+  }
+
+  .team-container {
+    padding: 30px 32px;
+  }
+
+  .team .container .team__title {
+    color: var(--main-color-black);
+    @include font(36px, 700, 42px);
+    letter-spacing: 0.03em;
+  }
 }
