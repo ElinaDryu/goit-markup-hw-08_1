@@ -49,51 +49,93 @@
   height: 294px;
 }
 
-// .portfolio__examples {
-//   background-color: var(--accent-color-white);
+@media screen and (min-width: 768px) {
+  .prf-img-size,
+  .overlay-wrapper {
+    width: 354px;
+    height: 294px;
+  }
+  .portfolio__examples {
+    width: 354px;
+    height: 404px;
+  }
+  .portfolio {
+    &__title,
+    &__text {
+      width: 306px;
+    }
+  }
 
-//   &:not(:last-child) {
-//     margin-right: 30px;
-//   }
+  .tablet-exmp2 {
+    height: 440px;
+  }
 
-// }
+  .container__title {
+    width: 354px;
+  }
 
-// .first-portf-line,
-// .second-portf-line,
-// .third-portf-line {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
+  .tablet-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
-// .second-portf-line,
-// .third-portf-line {
-//   margin-top: 30px;
-// }
-// .portfolio {
-//   &__link {
-//     text-decoration: none;
-//     display: inline-block;
-//   }
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+  .tablet-exmp1,
+  .tablet-exmp3,
+  .tablet-exmp5,
+  .tablet-exmp7 {
+    margin-right: 30px;
+  }
+  .tablet-exmp1 {
+    margin-bottom: 66px;
+  }
+  .tablet-exmp2,
+  .tablet-exmp3,
+  .tablet-exmp4,
+  .tablet-exmp5,
+  .tablet-exmp6,
+  .tablet-exmp7,
+  .tablet-exmp8 {
+    margin-bottom: 30px;
+  }
+}
 
-//   &__title {
-//     color: var(--main-color-black);
-//     @include font(18px, 700, 36px);
-//     letter-spacing: 0.06em;
-//     width: 322px;
-//     margin-bottom: 4px;
-//   }
-//   &__text {
-//     color: var(--main-color-grey);
-//     @include font(16px, 400, 30px);
-//     letter-spacing: 0.03em;
-//     width: 322px;
-//   }
-// }
+@media screen and (min-width: 1200px) {
+  .prf-img-size,
+  .overlay-wrapper {
+    width: 370px;
+    height: 294px;
+  }
+  .portfolio__examples {
+    width: 370px;
+    height: 404px;
+  }
 
-// .container__title {
-//   padding: 20px 24px 20px 24px;
-//   border: 1px solid var(--portfolio-bcg-cards-color);
-//   border-top: none;
-//   width: 370px;
-// }
+  .portfolio {
+    &__title,
+    &__text {
+      width: 322px;
+    }
+  }
+  .container__title {
+    width: 370px;
+  }
+  .tablet-exmp2,
+  .tablet-exmp4,
+  .tablet-exmp8,
+  .tablet-exmp1,
+  .tablet-exmp5,
+  .tablet-exmp7 {
+    margin-right: 30px;
+  }
+
+  .tablet-exmp1,
+  .tablet-exmp2,
+  .tablet-exmp3,
+  .tablet-exmp4,
+  .tablet-exmp5,
+  .tablet-exmp6 {
+    margin-bottom: 30px;
+  }
+}

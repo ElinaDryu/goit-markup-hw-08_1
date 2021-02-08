@@ -81,11 +81,14 @@
     padding-bottom: 34px;
   }
 
-  .filter__list:not(:last-child) {
-    margin-right: 8px;
-  }
-  &:nth-child(3) {
-    margin-right: 8px;
+  .filter__list {
+    &:nth-child(3) {
+      margin-right: 8px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 
   .filters-container {
