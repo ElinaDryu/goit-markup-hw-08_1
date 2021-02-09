@@ -11,8 +11,21 @@
     position: absolute;
     height: 4px;
     background-color: var(--accent-color-blue);
-    bottom: -32px;
+    bottom: -12px;
     left: 0px;
     border-radius: 2px;
   }
 }
+
+// &::after {
+//     content: "";
+//     display: inline-block;
+//     width: 100%;
+//     position: absolute;
+//     height: 4px;
+//     background-color: var(--accent-color-blue);
+//     bottom: -32px;
+//     left: 0px;
+//     border-radius: 2px;
+//   }
+// }
