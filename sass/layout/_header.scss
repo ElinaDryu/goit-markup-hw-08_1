@@ -16,63 +16,83 @@ header {
   }
 }
 
-.menu-button {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
-  .icon-cross {
+    .icon-cross {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color-blue);
+    }
+  }
+
+  .menu-button.is-open .icon-cross {
+    display: block;
+    background-position: center;
+    &:hover,
+    &:focus {
+      fill: var(--accent-color-blue);
+    }
+  }
+  .menu-button.is-open .icon-menu {
     display: none;
   }
 
-  &:hover,
-  &:focus {
-    fill: var(--accent-color-blue);
+  .header {
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+    }
   }
-}
 
-.menu-button.is-open .icon-cross {
-  display: block;
-  background-position: center;
-  &:hover,
-  &:focus {
-    fill: var(--accent-color-blue);
-  }
-}
-.menu-button.is-open .icon-menu {
-  display: none;
-}
-
-.header {
-  .site-nav {
-    display: flex;
+  .icon-menu {
     align-items: center;
-    justify-content: space-between;
-    min-height: 50px;
+    justify-content: center;
   }
-}
 
-.icon-menu {
-  align-items: center;
-  justify-content: center;
-}
+  .menu-container {
+    position: absolute;
+    top: 61px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: white;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-.menu-container {
-  position: absolute;
-  top: 61px;
-  left: 0;
-  width: 100%;
-  display: none;
-  background-color: white;
-  text-align: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+    &.is-open {
+      display: block;
+    }
+  }
 
-  &.is-open {
-    display: block;
+  .nav-contacts__item {
+    display: flex;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .nav-adress {
+    margin-top: 60px;
+  }
+  .site-nav {
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -84,9 +104,7 @@ header {
   &__link:focus {
     color: var(--accent-color-blue);
   }
-  &__item:not(:last-child) {
-    margin-bottom: 40px;
-  }
+
   &__link {
     text-decoration: none;
     color: var(--main-color-black);
@@ -124,16 +142,6 @@ header {
 
 .nav-adress {
   font-style: normal;
-  margin-top: 60px;
-}
-
-.nav-contacts__item {
-  display: flex;
-  justify-content: center;
-
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
 }
 
 .mail {
@@ -149,102 +157,126 @@ header {
   margin-bottom: 1px;
 }
 
-// .header {
-//   display: flex;
-//   align-items: center;
-//   border-bottom: 1px solid var(--line-header);
-// }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+  }
 
-// .site-nav {
-//   display: flex;
-//   align-items: center;
-// }
+  .site-nav {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    &__items {
+      display: flex;
+      align-items: center;
+      margin-right: 84px;
+    }
 
-// .header {
-//   .container {
-//     display: flex;
-//     align-items: center;
-//     padding-top: 25px;
-//     padding-bottom: 25px;
-//   }
-//   .logo {
-//     margin-right: 93px;
-//   }
-// }
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
 
-// .site-nav {
-//   &__items {
-//     display: flex;
-//   }
-//   &__link:hover,
-//   &__link:focus {
-//     color: var(--accent-color-blue);
-//   }
-//   &__item:not(:last-child) {
-//     margin-right: 50px;
-//   }
-//   &__link {
-//     text-decoration: none;
-//     color: var(--main-color-black);
-//     @include font(14px, 500, 16px);
-//     letter-spacing: 0.02em;
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   }
-//   &__contacts {
-//     color: var(--main-color-grey);
-//     @include font(14px, 500, 16px);
-//     letter-spacing: 0.02em;
-//     text-decoration: none;
-//     display: flex;
-//     align-items: center;
-//     padding: 2px 0px;
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &__contacts {
+      @include font(12px, 500, 14px);
+    }
 
-//     &:hover,
-//     &:focus {
-//       color: var(--accent-color-blue);
-//     }
-//   }
-// }
+    &__link {
+      @include font(14px, 500, 16px);
+    }
+  }
 
-// .contacts {
-//   display: flex;
-//   font-style: normal;
-// }
+  .menu-button {
+    display: none;
+  }
 
-// .nav-adress {
-//   margin-left: auto;
-// }
+  .nav-contacts__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 
-// .nav-contacts {
-//   &__item:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
-// .mail__icon {
-//   width: 16px;
-//   height: 12px;
-//   fill: var(--main-color-grey);
-//   cursor: pointer;
-//   margin-right: 10px;
-// }
-// .site-nav__contacts:hover .mail__icon,
-// .site-nav__contacts:focus .mail__icon {
-//   fill: var(--accent-color-blue);
-// }
+  .header {
+    .container {
+      padding-top: 25px;
+      padding-bottom: 19px;
+    }
+    .logo {
+      margin-right: 88px;
+    }
+  }
+}
 
-// .mail {
-//   &__icon:hover,
-//   &__icon:focus {
-//     fill: var(--accent-color-blue);
-//   }
-// }
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: flex;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+  }
 
-// .tel {
-//   width: 10px;
-//   height: 16px;
-//   margin-bottom: 1px;
-// }
-// .logo {
-//   @include font(26px, 700, 31px);
-// }
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header {
+    .container {
+      display: flex;
+      align-items: center;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    .logo {
+      margin-right: 93px;
+    }
+  }
+
+  .site-nav {
+    &__items {
+      display: flex;
+    }
+    &__link:hover,
+    &__link:focus {
+      color: var(--accent-color-blue);
+    }
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+    &__link {
+      @include font(14px, 500, 16px);
+    }
+    &__contacts {
+      @include font(14px, 500, 16px);
+
+      display: flex;
+      align-items: center;
+      padding: 2px 0px;
+
+      &:hover,
+      &:focus {
+        color: var(--accent-color-blue);
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    font-style: normal;
+  }
+
+  .nav-adress {
+    margin-left: 305px;
+  }
+
+  .nav-contacts {
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
